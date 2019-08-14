@@ -21,6 +21,7 @@ const initialState = {
         case 'REMOVE_FEATURE': 
             return {
                 ...state, 
+                additionalPrice: 0,
                 car: {
                     ...state.car,
                     features: state.car.features.filter(feature => {
