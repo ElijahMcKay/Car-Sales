@@ -22,11 +22,10 @@ const initialState = {
             return {
                 ...state, 
                 car: {
-                    // feature.filter(feature => {
-                    //     if(feature === state.store.name) {
-
-                    //     }f
-                    // })
+                    ...state.car,
+                    features: state.car.features.filter(feature => {
+                        return feature.id !== action.payload.id
+                    })
                 }
             }
         case 'ADD_ITEM': 
