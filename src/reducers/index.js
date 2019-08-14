@@ -20,8 +20,8 @@ const initialState = {
     switch (action.type) {
         case 'REMOVE_FEATURE': 
             return {
-                ...state, 
-                additionalPrice: 0,
+                ...state,
+                additionalPrice: state.additionalPrice - action.payload.price,
                 car: {
                     ...state.car,
                     features: state.car.features.filter(feature => {
@@ -30,7 +30,7 @@ const initialState = {
                 }
             }
         case 'ADD_ITEM': 
-            console.log('checking add-item state', state)
+            // console.log('checking add-item state', state)
             return {
                 ...state,
                 additionalPrice: state.additionalPrice + action.payload.price,

@@ -3,7 +3,7 @@ export const removeItem = (itemName) => {
 
     return {
         type: 'REMOVE_FEATURE',
-        payload: itemName
+        payload: itemName,
     }
 }
 
